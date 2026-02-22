@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FONT AWESOME - Ícones profissionais pra saúde -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Boxicons (mantive pra não quebrar outros ícones que você possa usar) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="css/login.css">
+    <title>Clinica Bem-Estar - Login</title>
+</head>
+<body>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <main class="container">
+        
+        <!-- FORMULÁRIO DE LOGIN -->
+        <form id="loginForm">
+            
+            <!-- TÍTULO -->
+            <h1>Clinica Bem-Estar</h1>
+            <!-- End TÍTULO -->
+
+            <!-- SELEÇÃO DE MODO -->
+            <!-- Botões com ícones específicos pra cada função do hospital -->
+            <div class="modo-selecao">
+                
+                <!-- BOTÃO MÉDICO -->
+                <!-- Ícone de estetoscópio - super reconhecível pra médico -->
+                <button type="button" class="modo-btn ativo" data-modo="medico">
+                    <i class="fas fa-stethoscope"></i> Médico
+                </button>
+                <!-- End BOTÃO MÉDICO -->
+
+                <!-- BOTÃO RECEPÇÃO -->
+                <!-- Ícone de prancheta/clipboard - remete a atendimento/recepção -->
+                <button type="button" class="modo-btn" data-modo="recepcao">
+                    <i class="fas fa-clipboard-list"></i> Recepção
+                </button>
+                <!-- End BOTÃO RECEPÇÃO -->
+
+                <!-- BOTÃO ADMINISTRATIVO -->
+                <!-- Ícone de pasta/arquivo - passa a ideia de administrativo/documentos -->
+                <button type="button" class="modo-btn" data-modo="admin">
+                    <i class="fas fa-folder-open"></i> Administrativo
+                </button>
+                <!-- End BOTÃO ADMINISTRATIVO -->
+                
+                
+            </div>
+            <!-- End SELEÇÃO DE MODO -->
+
+            <!-- CAMPO DE EMAIL -->
+            <div class="input-box">
+                <input placeholder="E-mail" type="email" name="email" id="email" required>
+                <!-- Mantive o Boxicons aqui porque ele já tem ícones bonitos pra input -->
+                <i class="bx bxs-user"></i>
+            </div>
+            <!-- End CAMPO DE EMAIL -->
+
+            <!-- CAMPO DE SENHA -->
+            <div class="input-box">
+                <input placeholder="Senha" type="password" name="password" id="password" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <!-- End CAMPO DE SENHA -->
+
+            <!-- OPÇÕES LEMBRAR/ESQUECI -->
+            <div class="remember">
+                <label> 
+                    <input type="checkbox" id="remember">
+                    Lembrar minha senha
+                </label>
+                <a href="esqueci-minha-senha.html" class="esqueci-minha-senha" id="forgotPassword">Esqueci minha senha</a>
+            </div>
+            <!-- End OPÇÕES LEMBRAR/ESQUECI -->
+
+            <!-- BOTÃO DE LOGIN -->
+            <button class="login" type="submit">
+                <i class="fas fa-sign-in-alt" style="margin-right: 8px;"></i> Login
+            </button>
+            <!-- End BOTÃO DE LOGIN -->
+            
+            <!-- MENSAGEM DE SUCESSO -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle" style="margin-right: 5px;"></i> Login realizado com sucesso! Redirecionando...
+            </div>
+            <!-- End MENSAGEM DE SUCESSO -->
+
+            <!-- MENSAGEM DE ERRO -->
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-triangle" style="margin-right: 5px;"></i>
+            </div>
+            <!-- End MENSAGEM DE ERRO -->
+
+            <!-- LINK DE CADASTRO -->
+            <div class="register-Link">
+                <p><i class="fas fa-user-plus" style="margin-right: 5px;"></i> Não tem uma conta? <a href="cadastro-funcionarios.html" id="registerLink">Cadastrar-se</a></p> 
+            </div>
+            <!-- End LINK DE CADASTRO -->
+
+        </form>
+        <!-- End FORMULÁRIO DE LOGIN -->
+
+    </main>
+    <!-- End CONTAINER PRINCIPAL -->
+
+    <!-- LOADING SPINNER -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p><i class="fas fa-hospital" style="margin-right: 8px;"></i> Verificando credenciais...</p>
+    </div>
+    <!-- End LOADING SPINNER -->
+
+</body>
+</html>

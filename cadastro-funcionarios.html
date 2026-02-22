@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FONT AWESOME - Ícones profissionais pra saúde -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Boxicons - pros ícones dos inputs -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- CSS DA PÁGINA DE CADASTRO -->
+    <link rel="stylesheet" href="css/cadastro.css">
+    
+    <title>Clínica Bem-Estar - Cadastro</title>
+</head>
+<body>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <!-- Caixa que envolve todo o formulário de cadastro -->
+    <main class="container">
+        
+        <!-- FORMULÁRIO DE CADASTRO -->
+        <!-- Por enquanto só HTML - depois a gente conecta com JavaScript -->
+        <form id="cadastroForm">
+            
+            <!-- TÍTULO -->
+            <h1>Criar Conta</h1>
+            <!-- End TÍTULO -->
+
+            <!-- SELEÇÃO DE MODO -->
+            <!-- Botões pra escolher o tipo de usuário (igual ao login) -->
+            <div class="modo-selecao">
+                
+                <!-- BOTÃO MÉDICO -->
+                <button type="button" class="modo-btn ativo" data-modo="medico">
+                    <i class="fas fa-stethoscope"></i> Médico
+                </button>
+                <!-- End BOTÃO MÉDICO -->
+
+                <!-- BOTÃO RECEPÇÃO -->
+                <button type="button" class="modo-btn" data-modo="recepcao">
+                    <i class="fas fa-clipboard-list"></i> Recepção
+                </button>
+                <!-- End BOTÃO RECEPÇÃO -->
+
+                <!-- BOTÃO ADMINISTRATIVO -->
+                <button type="button" class="modo-btn" data-modo="admin">
+                    <i class="fas fa-folder-open"></i> Administrativo
+                </button>
+                <!-- End BOTÃO ADMINISTRATIVO -->
+                
+            </div>
+            <!-- End SELEÇÃO DE MODO -->
+
+            <!-- CAMPO NOME COMPLETO -->
+            <!-- Nome do usuário - campo obrigatório -->
+            <div class="input-box">
+                <input placeholder="Nome Completo" type="text" name="nome" id="nome" required>
+                <i class="bx bxs-user"></i> <!-- Ícone de usuário -->
+            </div>
+            <!-- End CAMPO NOME COMPLETO -->
+
+            <!-- CAMPO EMAIL -->
+            <!-- Email do usuário - validação de email -->
+            <div class="input-box">
+                <input placeholder="E-mail" type="email" name="email" id="email" required>
+                <i class="bx bxs-envelope"></i> <!-- Ícone de envelope -->
+            </div>
+            <!-- End CAMPO EMAIL -->
+
+            <!-- CAMPO CPF -->
+            <!-- CPF do usuário - só números -->
+            <div class="input-box">
+                <input placeholder="CPF (apenas números)" type="text" name="cpf" id="cpf" maxlength="11" required>
+                <i class="bx bxs-id-card"></i> <!-- Ícone de documento -->
+            </div>
+            <!-- End CAMPO CPF -->
+
+            <!-- CAMPO TELEFONE -->
+            <!-- Telefone pra contato -->
+            <div class="input-box">
+                <input placeholder="Telefone" type="tel" name="telefone" id="telefone" required>
+                <i class="bx bxs-phone"></i> <!-- Ícone de telefone -->
+            </div>
+            <!-- End CAMPO TELEFONE -->
+
+            <!-- CAMPO SENHA -->
+            <!-- Senha com medidor de força -->
+            <div class="input-box">
+                <input placeholder="Senha" type="password" name="password" id="password" required>
+                <i class="bx bxs-lock-alt"></i> <!-- Ícone de cadeado -->
+            </div>
+            <!-- End CAMPO SENHA -->
+
+            <!-- MEDIDOR DE FORÇA DA SENHA -->
+            <!-- Barra que mostra se a senha é fraca/média/forte -->
+            <div class="password-strength" id="passwordStrength">
+                <span>Força da senha:</span>
+                <div class="strength-bar">
+                    <div class="strength-fill" id="strengthFill"></div>
+                </div>
+            </div>
+            <!-- End MEDIDOR DE FORÇA DA SENHA -->
+
+            <!-- CAMPO CONFIRMAR SENHA -->
+            <!-- Pra garantir que o usuário digitou a senha certa -->
+            <div class="input-box">
+                <input placeholder="Confirmar Senha" type="password" name="confirm_password" id="confirm_password" required>
+                <i class="bx bxs-lock"></i> <!-- Ícone de cadeado (outro estilo) -->
+            </div>
+            <!-- End CAMPO CONFIRMAR SENHA -->
+
+            <!-- BOTÃO DE CADASTRO -->
+            <button class="login" type="submit">
+                <i class="fas fa-user-plus" style="margin-right: 8px;"></i> Cadastrar
+            </button>
+            <!-- End BOTÃO DE CADASTRO -->
+            
+            <!-- MENSAGEM DE SUCESSO -->
+            <!-- Aparece quando o cadastro deu certo -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Cadastro realizado com sucesso! Redirecionando...
+            </div>
+            <!-- End MENSAGEM DE SUCESSO -->
+
+            <!-- MENSAGEM DE ERRO -->
+            <!-- Aparece quando algo deu errado -->
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <!-- End MENSAGEM DE ERRO -->
+
+            <!-- LINK VOLTAR AO LOGIN -->
+            <!-- Pra quem já tem conta -->
+            <div class="register-Link">
+                <p><i class="fas fa-sign-in-alt"></i> Já tem uma conta? <a href="login.html">Fazer Login</a></p> 
+            </div>
+            <!-- End LINK VOLTAR AO LOGIN -->
+
+        </form>
+        <!-- End FORMULÁRIO DE CADASTRO -->
+
+    </main>
+    <!-- End CONTAINER PRINCIPAL -->
+
+    <!-- LOADING SPINNER -->
+    <!-- Aparece enquanto processa o cadastro -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p><i class="fas fa-hospital"></i> Processando cadastro...</p>
+    </div>
+    <!-- End LOADING SPINNER -->
+
+<!-- 
+    Aqui entra o JavaScript quando você for adicionar
+    <script src="js/cadastro.js"></script>    
+-->
+
+</body>
+</html>
