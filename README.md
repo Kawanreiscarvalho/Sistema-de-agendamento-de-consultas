@@ -1,1 +1,1 @@
-1- Primeira Fase do projeto criar o front incial.
+1- Primeira Fase do projeto criar o frontend incial.
