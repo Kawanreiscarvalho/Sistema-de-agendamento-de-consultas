@@ -1,18 +1,11 @@
-/**
- * ARQUIVO: login.css
- * 
- * Esse é o estilo da tela de login da Clínica Bem-Estar
- * Fiz pensando em ser moderno mas sem complicar
- */
-
-/* Fonte Poppins - usei ela porque é bonita e tem vários pesos */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/**
- * Reset básico
- * Tiro todas as margens e paddings que vem por padrão
- * O box-sizing ajuda pra não ter dor de cabeça com larguras
- */
+:root {
+    --blue: #0188df;
+    --black: #444d53;
+    --white: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,13 +13,8 @@
     font-family: "Poppins", sans-serif;
 }
 
-/**
- * Fundo da página
- * Fiz um degradê saindo do branco pro verde
- * Centralizo tudo usando flexbox - mais fácil que ficar usando position
- */
 body {
-    background: linear-gradient(135deg, #ffffff 0%, #fdfffd 50%, #00c72b 100%);
+    background: linear-gradient(135deg, var(--white) 0%, #f0f8ff 50%, var(--blue) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,28 +22,19 @@ body {
     padding: 20px;
 }
 
-/**
- * O quadradinho branco (que na verdade é verde) do formulário
- * Coloquei um blur no fundo pra dar aquele efeito "vidro" moderno
- * A sombra dá uma profundidade legal
- */
 .container {
     width: 100%;
     max-width: 420px;
-    background-color: rgb(1, 100, 39);
+    background-color: var(--black);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    color: #fff;
+    color: var(--white);
     padding: 30px 40px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(1, 136, 223, 0.2);
     backdrop-filter: blur(10px);
     animation: fadeIn 0.8s ease-out;
 }
 
-/**
- * Animação de entrada - só pra não ser tão brusco
- * O formulário vem de baixo e vai aparecendo
- */
 @keyframes fadeIn {
     from { 
         opacity: 0; 
@@ -67,34 +46,22 @@ body {
     }
 }
 
-/**
- * Título "Clínica Bem-Estar"
- * Coloquei um degradê no texto, fica bonito e chama atenção
- */
 .container h1 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    background: linear-gradient(to right, #f75e4a, #3ae53a);
+    background: linear-gradient(to right, var(--blue), #4aa3e6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
 }
 
-/**
- * Área dos botões de seleção (Médico/Recepção/Administrativo)
- * Uso gap pra dar espaçamento entre eles
- */
 .modo-selecao {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
 }
 
-/**
- * Estilo padrão dos botões de modo
- * Deixo eles meio transparentes pra combinar com o fundo
- */
 .modo-btn {
     flex: 1;
     padding: 10px;
@@ -107,20 +74,12 @@ body {
     text-align: center;
 }
 
-/**
- * Quando o modo tá selecionado
- * Mudo a cor da borda pro azul pra destacar
- */
 .modo-btn.ativo {
-    border-color: #4A6CF7;
-    background: rgba(74, 108, 247, 0.2);
-    color: white;
+    border-color: var(--blue);
+    background: rgba(1, 136, 223, 0.2);
+    color: var(--white);
 }
 
-/**
- * Cada campo do formulário (email, senha)
- * Uso position relative porque vou colocar o ícone dentro depois
- */
 .input-box {
     position: relative;
     width: 100%;
@@ -128,10 +87,6 @@ body {
     margin: 25px 0;
 }
 
-/**
- * Estilo dos inputs
- * Borda arredondada, fundo transparente, texto branco
- */
 .input-box input {
     width: 100%;
     height: 100%;
@@ -140,32 +95,20 @@ body {
     border-radius: 30px;
     outline: none;
     font-size: 16px;
-    color: white;
+    color: var(--white);
     padding: 0 45px 0 20px;
     transition: all 0.3s ease;
 }
 
-/**
- * Quando o input tá em foco
- * Mudo a borda pro azul e dou um brilho suave
- */
 .input-box input:focus {
-    border-color: #4A6CF7;
-    box-shadow: 0 0 10px rgba(74, 108, 247, 0.5);
+    border-color: var(--blue);
+    box-shadow: 0 0 10px rgba(1, 136, 223, 0.5);
 }
 
-/**
- * Placeholder dos inputs
- * Deixo mais transparente pra não competir com o texto digitado
- */
 .input-box input::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/**
- * Os ícones dentro dos inputs (usuário, cadeado)
- * Posiciono absolutamente no lado direito
- */
 .input-box i {
     position: absolute;
     right: 20px;
@@ -177,17 +120,10 @@ body {
     transition: color 0.3s ease;
 }
 
-/**
- * Mudo a cor do ícone quando o input tá em foco
- */
 .input-box input:focus + i {
-    color: #4A6CF7;
+    color: var(--blue);
 }
 
-/**
- * Linha do "Lembrar minha senha" e "Esqueci minha senha"
- * Flex wrap pra quebrar em telas pequenas
- */
 .remember {
     display: flex;
     justify-content: space-between;
@@ -196,9 +132,6 @@ body {
     flex-wrap: wrap;
 }
 
-/**
- * Label do checkbox
- */
 .remember label {
     display: flex;
     align-items: center;
@@ -206,73 +139,50 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/**
- * Customização do checkbox
- */
 .remember label input {
-    accent-color: #4A6CF7;
+    accent-color: var(--blue);
     margin-right: 5px;
 }
 
-/**
- * Link "Esqueci minha senha"
- */
 .esqueci-minha-senha {
-    color: #4A6CF7;
+    color: var(--blue);
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
-/**
- * Quando passa o mouse no "Esqueci minha senha"
- * Mudo pra amarelo pra dar feedback visual
- */
 .esqueci-minha-senha:hover {
-    color: #eeff00;
-    text-decoration: none;
+    color: #4aa3e6;
+    text-decoration: underline;
 }
 
-/**
- * Botão de login principal
- * Degradê azul, sombra, e um efeito de brilho quando passa o mouse
- */
 .login {
     width: 100%;
     height: 50px;
-    background: linear-gradient(to right, #4a87f7, #3a5ce5);
+    background: linear-gradient(to right, var(--blue), #4aa3e6);
     border: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 16px;
-    color: #fff;
+    color: var(--white);
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.4);
+    box-shadow: 0 4px 15px rgba(1, 136, 223, 0.4);
     margin-top: 20px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-/**
- * Efeito de levantar o botão quando passa o mouse
- */
 .login:hover {
-    background: red;
+    background: var(--blue);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgb(255, 255, 255);
+    box-shadow: 0 6px 20px rgba(1, 136, 223, 0.6);
 }
 
-/**
- * Efeito de clique no botão
- */
 .login:active {
     transform: translateY(1px);
 }
 
-/**
- * Efeito de brilho que passa no botão
- */
 .login::after {
     content: '';
     position: absolute;
@@ -284,17 +194,10 @@ body {
     transition: left 0.5s;
 }
 
-/**
- * Faz o brilho se mover quando passa o mouse
- */
 .login:hover::after {
     left: 100%;
 }
 
-/**
- * Link para cadastro
- * Texto no final do formulário
- */
 .register-Link {
     font-size: 14px;
     text-align: center;
@@ -302,29 +205,18 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/**
- * Estilo do link de cadastro
- */
 .register-Link a {
     text-decoration: none;
-    color: #4A6CF7;
+    color: var(--blue);
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-/**
- * Quando passa o mouse no link de cadastro
- * Fica amarelo igual o outro
- */
 .register-Link a:hover {
-    text-decoration: none;
-    color: #eeff00;
+    text-decoration: underline;
+    color: #4aa3e6;
 }
 
-/**
- * Mensagem de erro
- * Fica escondida até acontecer algum erro
- */
 .error-message {
     display: none;
     color: #f87171;
@@ -337,10 +229,6 @@ body {
     animation: fadeIn 0.5s ease-out;
 }
 
-/**
- * Mensagem de sucesso
- * Aparece quando deu tudo certo
- */
 .success-message {
     display: none;
     color: #4ade80;
@@ -353,10 +241,6 @@ body {
     animation: fadeIn 0.5s ease-out;
 }
 
-/**
- * Spinner de carregamento
- * Aparece enquanto tá processando o login
- */
 .loading-spinner {
     display: none;
     position: fixed;
@@ -371,39 +255,26 @@ body {
     flex-direction: column;
 }
 
-/**
- * Círculo que fica girando
- */
 .spinner {
     width: 60px;
     height: 60px;
     border: 5px solid rgba(255, 255, 255, 0.3);
-    border-top: 5px solid #4A6CF7;
+    border-top: 5px solid var(--blue);
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin-bottom: 15px;
 }
 
-/**
- * Texto embaixo do spinner
- */
 .loading-spinner p {
-    color: white;
+    color: var(--white);
     font-size: 16px;
 }
 
-/**
- * Animação de giro do spinner
- */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/**
- * Ajustes para celular
- * Quando a tela for menor que 480px
- */
 @media (max-width: 480px) {
     .container {
         padding: 20px 25px;
