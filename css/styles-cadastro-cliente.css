@@ -1,0 +1,223 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    background-color: rgb(46, 151, 144);
+}
+#logo{
+    height: 300px;
+    margin-right: 50px;
+    margin-left: 30px;
+}
+#plano-de-fundo{
+    position:fixed;
+    margin-left: 780px;
+}
+.formulario{
+    margin-top:15px;
+    margin-right: 400px;
+    width: 100%;
+    max-width: 420px;
+    padding:30px 40px;
+    background-color: rgb(64, 1, 100);
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px rgba(245, 8, 8, 0.3);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8 ease-out;
+    
+}
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+.formulario h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #e6ff07, #eb0994);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 1000;
+    
+}
+#campo_de_nome{
+    position:relative;
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+}
+#campo_de_usuario {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+} 
+#campo_de_telefone{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+    margin-top:auto
+}
+#campo_de_senha{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+    margin-top:auto
+}
+#campo_de_confirma_senha{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+    margin-top:auto
+}
+.botões-de-preenchimento input {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding: 0 45px 0 20px;
+    transition: all 0.3s ease;
+}
+#icone-de-cadeado{
+    position: absolute;
+    right: 60px;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+#icone-de-usuario{
+    position: absolute;
+    right: 60px;
+    top: 31.2%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+#icone-de-telefone{
+    position: absolute;
+    right: 60px;
+    top: 43.4%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+#icone-de-cadeado2{
+    position: absolute;
+    right: 60px;
+    top: 67.5%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+.botões-de-preenchimento input:focus + i{
+    color: #1e4af8
+}
+.lembra-esqueci{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 55px 55 55px;
+    flex-wrap: wrap;
+}
+label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+label input {
+    accent-color: #4A6CF7;
+    margin-right: 5px;
+}
+a {
+    color: #4A6CF7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    margin-left: 20px;
+}
+button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, #4a87f7, #3a5ce5);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.4);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+button:active{
+    transform: translateY(1px);
+}
+p{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    color: #4A6CF7;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.time-carregamento{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media (max-width: 480px) {
+    body {
+        padding: 20px 25px;
+    }
+    
+    body h1 {
+        font-size: 32px;
+    }
+    
+    .lembrar-e-esqueci {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

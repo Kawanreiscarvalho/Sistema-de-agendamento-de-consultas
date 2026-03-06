@@ -1,0 +1,308 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background:#f5faff;
+  color:#1a1a1a;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  position:fixed;
+  width:100%;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  z-index:1000;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:#0077ff;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#0077ff;
+}
+
+.login-btn{
+  background:#0077ff;
+  color:white !important;
+  padding:8px 18px;
+  border-radius:20px;
+}
+
+.login-btn:hover{
+  background:#005fcc;
+}
+
+.hero{
+  height:100vh;
+  background:linear-gradient(120deg,#0077ff,#00c6ff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+.hero-content h1{
+  font-size:48px;
+  margin-bottom:20px;
+  animation:fadeDown 1s ease;
+}
+
+.hero-content p{
+  font-size:20px;
+  margin-bottom:30px;
+  animation:fadeUp 1.2s ease;
+}
+
+.hero button{
+  padding:14px 35px;
+  border:none;
+  border-radius:50px;
+  background:white;
+  color:#0077ff;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.servicos{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.servicos h2{
+  font-size:32px;
+  margin-bottom:50px;
+  color:#0077ff;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(15px);
+  padding:30px;
+  width:280px;
+  border-radius:20px;
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#0077ff;
+}
+
+.sobre{
+  padding:100px 20px;
+  background:#f5f9ff;
+}
+
+.sobre-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.sobre-imagem img{
+  width:100%;
+  max-width:450px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.sobre-texto{
+  flex:1;
+}
+
+.sobre-texto h2{
+  color:#0077ff;
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.sobre-texto p{
+  color:#555;
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
+.contato{
+  padding:100px 20px;
+  background:#f5f9ff;
+  text-align:center;
+}
+
+.contato h2{
+  font-size:30px;
+  color:#0077ff;
+  margin-bottom:50px;
+}
+
+.contato-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.contato-item{
+  background:white;
+  padding:30px;
+  width:220px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.contato-item:hover{
+  transform:translateY(-5px);
+}
+
+.icone{
+  font-size:35px;
+}
+
+.contato-item h3{
+  margin-top:10px;
+  color:#0077ff;
+}
+
+.contato-item p{
+  color:#555;
+  margin-top:8px;
+  font-size:14px;
+  word-break:break-word;
+}
+
+.separador{
+  width:80%;
+  height:2px;
+  margin:60px auto;
+  background:linear-gradient(
+    to right,
+    transparent,
+    #0077ff,
+    transparent
+  );
+  border-radius:2px;
+}
+
+footer{
+  background:#0077ff;
+  padding:25px 20px;
+}
+
+.footer-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1200px;
+  margin:auto;
+  flex-wrap:wrap;
+  color:white;
+}
+
+.btn-funcionario{
+  padding:10px 22px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(135deg,#ffffff,#e6f2ff);
+  color:#0077ff;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn-funcionario:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+.btn-funcionario:active{
+  transform:scale(0.97);
+}
+
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@media (max-width:768px){
+
+  header{
+    padding:20px;
+  }
+
+  .hero-content h1{
+    font-size:32px;
+  }
+
+  .cards{
+    gap:20px;
+  }
+
+  .footer-content{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+
+  .sobre-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+
